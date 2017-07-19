@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TestApp</title>
+    <title>The Bike Shop | Modern Bikes </title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/foundation/5.0.2/css/foundation.css'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
+    <header>
+      <p class="logo">The Bike Shop</p>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Portfolio</a>
+          <a href="#">About Us</a>
+        </nav>
+    </header> 
 
     <%= yield %>
 
-    <footer>
-      &copy; 2017 Bike Berlin
-    </footer>
+    <footer class="allfooter">
+      <div class="footer_container">
+        <h3>The Bike shop</h3>
+        <p>Custom Bikes for a happy trail</p>
+        <ul>
+          <li><a href="#" class="social_icons"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+          <li><a href="#" class="social_icons"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+          <li><a href="#" class="social_icons"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+          <li><a href="#" class="social_icons"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#" class="social_icons"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+        <a href="#" class="btn btn_secondary">Contact Us</a>
+      </div>
+    </footer> 
   </body>
 </html>
