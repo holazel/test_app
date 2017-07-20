@@ -225,7 +225,7 @@ header {
 }
 
 .social_icons:hover {
-    color: #F2F2F2;
+    color: #E8D27C;
 }
 
 .btn_secondary {
@@ -405,4 +405,4 @@ header {
   .btn_secondary {
     font-size: 1em;
   }
-
+}
