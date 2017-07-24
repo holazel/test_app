@@ -4,10 +4,11 @@
     <title>The Bike Shop | Modern Bikes </title>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
@@ -17,32 +18,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
   </head>
+
   <body>
-    <header>
-      <p class="logo">The Bike Shop</p>
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Portfolio</a>
-          <a href="#">About Us</a>
-        </nav>
-    </header> 
-
-    <%= yield %>
-
-    <footer class="allfooter">
-      <div class="footer_container">
-        <h3>The Bike shop</h3>
-        <p>Custom Bikes for a happy trail</p>
-        <ul>
-          <li><a href="#" class="social_icons"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-          <li><a href="#" class="social_icons"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-          <li><a href="#" class="social_icons"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-          <li><a href="#" class="social_icons"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-          <li><a href="#" class="social_icons"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        </ul>
-        <a href="#" class="btn btn_secondary">Contact Us</a>
+    <div class="header-container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="free-shipping-offer">Enjoy free shipping on all orders. <a href="#" target="_blank">Learn more</a></div>
+        </div>
       </div>
-    </footer> 
+      <div class="row">
+        <div class="col-sm-12">
+          <%= image_tag("LOGO.jpg", class: "logo1") %>
+          <nav>
+            <a><%= link_to 'Home', root_path %></a>
+            <!-- <li><a href="#">About</a></li> -->
+            <a><%= link_to 'About', static_pages_about_path %></a>
+            <!-- <li><a href="#">Contact</a></li> -->
+            <a><%= link_to 'Contact', static_pages_contact_path %></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <%= yield %>
+    <footer class="allfooter">
+    <div class="footer_container">
+      <div class="col-sm-12"> <h3>The Bike shop | Custom Bikes for a happy trail</h3></div>
+        <div class="col-sm-6">
+          <ul>
+            <li><a href="#" class="social_icons"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="social_icons"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="social_icons"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="social_icons"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul></div>
+        <div class="col-sm-6">  <a href="#" class="btn btn_secondary">Contact Us</a></div>
+      </div>
+      <br>
+    </footer>
+
+   
   </body>
 </html>
