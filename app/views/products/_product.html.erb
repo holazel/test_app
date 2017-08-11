@@ -1,0 +1,10 @@
+<% cache product do %>
+	<div class="col-xs-12 col-sm-4 col-md-3">
+	  <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
+	  <div class="product_grid_box">
+	    <a href="#"><h2><%= link_to product.name, product %></h2></a>
+	    <%= product.colour %>
+	    <%= product.price %>
+	  </div>
+	</div><!-- /col -->
+<% end %>
