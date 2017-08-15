@@ -1,21 +1,26 @@
+<script>
+  $('#navLinks ul li').removeClass('active');
+  $('#navLinks ul li:nth-child(1)').addClass('active');
+</script>
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
   <ol class="carousel-indicators">
+    <% x=-1 %>
     <% @products.each_with_index do |product, index| %>
       <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<%= " active" if product == @products.first %>"></li>
     <% end %>
   </ol>
 
   <!-- Wrapper for slides -->
+    <div class="Intro">
+    <h1>Welcome to the bikeshop</h1>
+    <h3>Check out our newest collection</h3>
+  </div>
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
-      <div class="item<%= " active" if product == @products.first %>">
-        <%= link_to image_tag(product.image_url), product %>
-        <div class="carousel-caption">
-          <%= product.name %>
-        </div>
-      </div>
+      <%= render @products %>
     <% end %>
   </div>
 
