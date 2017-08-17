@@ -3,34 +3,103 @@
   $('#navLinks ul li:nth-child(1)').addClass('active');
 </script>
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
+<div id="featured-carousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <% x=-1 %>
-    <% @products.each_with_index do |product, index| %>
-      <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<%= " active" if product == @products.first %>"></li>
-    <% end %>
+    <li data-target="#featured-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#featured-carousel" data-slide-to="1"></li>
   </ol>
 
   <!-- Wrapper for slides -->
-    <div class="Intro">
-    <h1>Welcome to the bikeshop</h1>
-    <h3>Check out our newest collection</h3>
-  </div>
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
-      <%= render @products %>
+    <div class="item<%= " active" if product == @products.first %>">
+        <%= image_tag(product.image_url, class: "img-responsive") %>
+      <div class="carousel-caption">
+        <h3 style="color: white; font-weight: 600; line-height: 25;"><%= product.name %></h3>
+         <p>$ <%= product.price %></p>
+      </div>
+    </div>
     <% end %>
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#featured-carousel" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <a class="right carousel-control" href="#featured-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
     <span class="sr-only">Next</span>
   </a>
-</div><!-- /carousel -->
+</div>
+
+<%= params[:example_key] %>
+
+<br>
+<br>
+<br>
+<Center>
+ <h4>Check out our <u><a href="/products">products page</a></u> to see what items we offer to suit your needs.</h4><br>
+</Center>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <a href="#">
+        <%= image_tag("BANNER.jpg", size: "980x180", class: "thumbnail img-responsive") %>
+      </a>
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-0 col-sm-6" align="center">
+      <a href="#">
+        <%= image_tag("topvisual1.png", class: "thumbnail img-responsive") %>
+      </a>
+    </div>
+    <div class="col-sm-6" align="center">
+      <a href="#">
+        <%= image_tag("topvisual2.png", class: "thumbnail img-responsive") %>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <a href="#">
+        <%= image_tag("banner2.jpg", class: "thumbnail img-responsive") %>
+      </a>
+      <h2 class="event_title_" align="center"> TOP SELLERS </h2>    
+    </div>
+  </div>
+  <div class="row" align="center">
+        <div class="col-sm-offset-0 col-sm-3">
+           <%= image_tag("bike2.jpg", size: "180x180", class: "thumbnail img-responsive") %>
+              <div class="panel1">
+                <h5>Custom Bike Product</h5>
+                <h6 class="subheader1">$6000</h6>
+              </div>
+        </div>
+        <div class="col-sm-3">
+           <%= image_tag("bike1.jpg", size: "180x180", class: "thumbnail img-responsive") %>
+              <div class="panel1">
+                <h5>Custom Bike Product</h5>
+                <h6 class="subheader1">$600</h6>
+              </div>
+        </div>
+        <div class="col-sm-3">
+           <%= image_tag("bike3.jpg", size: "180x180", class: "thumbnail img-responsive") %>
+              <div class="panel1">
+                <h5>Custom Bike Product</h5>
+                <h6 class="subheader1">$600</h6>
+              </div>
+        </div>
+        <div class="col-sm-3">
+           <%= image_tag("bike4.jpg", size: "180x180", class: "thumbnail img-responsive") %>
+          <div class="panel1">
+            <h5>Custom Bike Product</h5>
+            <h6 class="subheader1">$600</h6>
+          </div>
+        </div>
+  </div>
+</div>
+
