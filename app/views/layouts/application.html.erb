@@ -23,9 +23,14 @@
     <div class="header-container">
       <div class="row">
         <div class="col-sm-12">
-          <div class="free-shipping-offer">Enjoy free shipping on all orders. <a href="#" target="_blank">Learn more</a></div>
+          <div class="free-shipping-offer">Enjoy free shipping on all orders. <a href="#" target="_blank">Learn more</a>
+
+          </div>
+
         </div>
       </div>
+
+
       <div class="row">
         <div class="col-sm-12">
           <%= image_tag("LOGO.jpg", class: "logo1") %>
@@ -35,10 +40,25 @@
             <a><%= link_to 'About', static_pages_about_path %></a>
             <!-- <li><a href="#">Contact</a></li> -->
             <a><%= link_to 'Contact', static_pages_contact_path %></a>
+
+            
+
+        <!-- Search Box -->
+        <%= form_tag("/products", method: "get", class:"navbar-form navbar-right") do %> 
+          <div class="form-group">
+            <%= label_tag(:q, "Search for:", class:"hidden") %>
+            <%= text_field_tag(:q, "", type:"text", class:"form-control", placeholder:"Search") %>
+          </div>
+        <%= submit_tag("Search", class:"btn btn-default") %>
+        <% end %>
+        <!-- End Search Box -->
+
           </nav>
         </div>
       </div>
     </div>
+
+
     <%= yield %>
     <footer class="allfooter">
     <div class="footer_container">
