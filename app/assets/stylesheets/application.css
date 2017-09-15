@@ -45,29 +45,37 @@ a:hover, a:focus {
   position: relative;
 }
 .logo1 {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         padding-left: 20px;
         padding-top: 5px;
-        padding-bottom: 5px;     
+        padding-bottom: 10px;     
 }
- nav {
-    float: right;
-    padding: 1em 2em;
-    font-size: 1.175em;
-    text-transform: uppercase;
+.logo1:hover {
+    background-color: white;
 }
- nav a {
-    text-decoration: none;
-    color: rgb(40, 47, 88);
-    margin-right: 1em;
-    transition: ease-in 450ms;
-    font-weight: 200;
+.navbar-inverse {
+    background-color: white;
+    position: inherit;
+
 }
- nav a:hover {
-    color: #ffe067;
-    text-decoration: none;
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: white;
+    color: black;
 }
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: rgba(189, 154, 154, 0);
+}
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
 .free-shipping-offer {
   background: #00263b;
   width: 100%;
