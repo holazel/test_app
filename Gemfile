@@ -62,3 +62,6 @@ end
 group :development, :test do
   gem 'sqlite3'
 end
+
+# Added Gems
+gem 'cancancan', '~> 1.10'

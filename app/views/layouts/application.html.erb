@@ -39,10 +39,15 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
           <!-- Sign up Log in -->
-          <div class="navbar-form navbar-right">
-              <a class="btn btn-default" data-method="get" href="/login">Login</a>
-              <a class="btn btn-default" data-method="get" href="/register">Register</a>  
-          </div>
+            <div class="navbar-form navbar-right">
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete, class:"btn btn-default" ) %>
+            <%= link_to('Edit User', edit_user_registration_path, :method => :get, class:"btn btn-default" ) %> 
+          <% else %>
+            <%= link_to('Login', new_user_session_path, :method => :get, class:"btn btn-default" ) %>
+            <%= link_to('Register', new_user_registration_path, :method => :get, class:"btn btn-default" ) %>  
+          <% end %>
+        </div>
           <!-- Search Box -->
           <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /> 
             <div class="form-group">
@@ -56,7 +61,7 @@
             <li class="active"><a href="/products">Catalog</a></li>
             <li class="active"><a href="/static_pages/about">About</a></li>
             <li class="active"><a href="/static_pages/contact">Contact Us</a></li>
-            <li class="active"><a href="/users">Users</a></li>
+            
             
           </ul>
 
@@ -65,17 +70,15 @@
     </nav>  
 
     <% if notice %>
-        <div class="alert alert-info">
-          <%= notice %>
-        </div>
-      <% elsif alert %>
-        <div class="alert alert-warning">
-          <%= alert %>
-        </div>
-      <% end %>
+      <div id="notice" class="alert alert-warning"><%= notice %></div>
+        <% end %>
+        <% if alert %>
+      <div id="alert" class="alert alert-danger"><%= alert %></div>
+    <% end %>
 
-
+    <div class="page-wrap">
     <%= yield %>
+     </div><!--end page-wrap-->
     <footer class="allfooter">
     <div class="footer_container">
       <div class="col-sm-12"> <h3>The Bike shop | Custom Bikes for a happy trail</h3></div>
