@@ -1,17 +1,18 @@
-
-<p id="notice"><%= notice %></p>
-
-<h1 class="funky anchor">All Products</h1>
-
-<div class="container">
-  <div class="row">
-    <%= render @products %>
-  </div> <!-- end row -->
-</div> <!-- end container -->
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+<article class="container">
+  <p id="notice"><%= notice %></p>
+  <h2>Products</h2>
+  <hr>
+  <div class="container-fluid prod">
+    
+      <% @products.each do |product| %>
+        <%= render product %>
+      <% end %>
+      
+  </div>
+  
+  <hr>
+  <%= link_to 'New Product', new_product_path , class: "btn btn-default" %>
+</article>
 
 
 
