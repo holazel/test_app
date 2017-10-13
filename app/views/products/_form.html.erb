@@ -10,36 +10,39 @@
       </ul>
     </div>
   <% end %>
-  
-  <div class="container col-sm-12 col-md-6 form-group">
-    <div class="field">
-      <%= f.label :name, class:"col-2 col-form-label"  %>
-      <%= f.text_field :name, class:"form-control", type:"text", placeholder:"Bike Model", id:"example-text-input" %>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="form-group top_of_field">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
     </div>
-    <div class="field">
-      <%= f.label :colour, class:"col-2 col-form-label"  %>
-      <%= f.text_field :colour, class:"form-control", type:"text", placeholder:"Colour", id:"example-text-input" %>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: "form-control" %>
     </div>
-    <div class="field">
-      <%= f.label :price, class:"col-2 col-form-label" %>
-      <div class="input-group"> 
-        <span class="input-group-addon">€</span>
-        <%= f.text_field :price, class:"form-control currency", type:"number", placeholder:"10.99", id:"example-number-input"%>
-      </div>
-    </div> 
-  <div class="container col-sm-12 col-md-6 form-group">  
-    <div class="field">
-      <%= f.label :description, class:"col-2 col-form-label"  %>
-      <%= f.text_area :description, class:"form-control", type:"text", placeholder:"Description", id:"example-text-input" %>
-    </div>
-    <div class="field">
+
+
+    <div class="form-group">
       <%= f.label :image_url %>
-      <%= f.text_field :image_url, class:"form-control", type:"url", placeholder:"Pic Link", id:"example-text-input" %>
+      <%= f.text_field :image_url, class: "form-control" %>
     </div>
-  </div> 
 
-  <div class="actions">
-    <%= f.submit class:"btn btn-default" %>
+    <div class="form-group">
+      <%= f.label :colour %>
+      <%= f.text_field :colour, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :price %>
+      <%= f.text_field :price, class: "form-control"%>
+    </div>
+
+    <div>
+      <%= f.submit class: "btn btn-info" %>
+    </div>
+  <% end %>
   </div>
-
-<% end %>
+</div>
+<br>
+<br>
