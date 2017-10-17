@@ -41,6 +41,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -66,3 +68,4 @@ end
 # Added Gems
 gem 'will_paginate', '~> 3.1'
 gem 'cancancan', '~> 1.10'
+
