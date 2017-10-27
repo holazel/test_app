@@ -4,8 +4,7 @@
 	  <div class="product_grid_box">
 	    <a href="#"><h2><%= link_to product.name, product %></h2></a>
 	    <%= product.colour %>
-	     <h4 class="inline funky"><strong>$ <%= product.price %></strong></h4>
+	    <h4 class="inline funky"><strong> <%= number_to_currency(product.price) %></strong></h4>
 	  </div>
 	</div><!-- /col -->
 <% end %>
-<br>

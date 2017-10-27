@@ -1,5 +1,4 @@
 <article class="container">
-  <p id="notice"><%= notice %></p>
   <h2>Products</h2>
   <hr>
   <div class="container-fluid prod">
@@ -12,6 +11,9 @@
   
   <hr>
   <%= link_to 'New Product', new_product_path , class: "btn btn-default" %>
+  <div class ="page-number">
+    <%= will_paginate @products %>
+  </div>
 </article>
 
 

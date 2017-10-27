@@ -1,6 +1,5 @@
 <article class="container">
   <div class="show"> 
-    <p id="notice"><%= notice %></p>
     <div class="row">
     <div class="col-sm-9 col-md-9">
     <p>
@@ -25,7 +24,7 @@
     </p>
     <p>
       <strong>Price:</strong>
-      <%= @product.price %>
+      <%= number_to_currency(@product.price) %>
     </p>
     <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
     
