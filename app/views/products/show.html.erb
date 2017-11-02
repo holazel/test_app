@@ -5,10 +5,9 @@
     <p>
      <%= 
         if (@product.image_url != nil)
-         image_tag(@product.image_url, class: "img-responsive product img-zoom", height: '350', width: '350', data_zoom_images:"/assets/"+@product.image_url) 
+         image_tag(@product.image_url, class: "img-responsive product img-zoom", height: '350', width: '350', data_zoom_images:@product.image_url) 
         end
          %>
-    </p>
     </div>
     <div class="col-sm-3 col-md-3">
     <p>
@@ -35,7 +34,7 @@
   <%= render partial: "shared/stripe_checkout_button" %>
  <% end %>
 
-    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></p>
     
     </div>
     </div>
