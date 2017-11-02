@@ -3,7 +3,11 @@
     <div class="row">
     <div class="col-sm-9 col-md-9">
     <p>
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
+     <%= 
+        if (@product.image_url != nil)
+         image_tag(@product.image_url, class: "img-responsive product img-zoom", height: '350', width: '350', data_zoom_images:"/assets/"+@product.image_url) 
+        end
+         %>
     </p>
     </div>
     <div class="col-sm-3 col-md-3">
