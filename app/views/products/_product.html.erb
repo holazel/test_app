@@ -1,10 +1,18 @@
-<% cache product do %>
-	<div class="col-xs-12 col-sm-4 col-md-3">
-	  <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
-	  <div class="product_grid_box">
-	    <a href="#"><h2><%= link_to product.name, product %></h2></a>
-	    <%= product.colour %>
-	    <h4 class="inline funky"><strong> <%= number_to_currency(product.price) %></strong></h4>
-	  </div>
-	</div><!-- /col -->
-<% end %>
+<div class="col-xs-12 col-sm-4 col-md-3">
+  <% cache product do %>
+  
+    <section class="product_image">
+      <% if product.image_url.present? %>
+        <%=link_to(image_tag(product.image_url, class:"product_image"), product) %>
+      <% end %>
+    </section>
+    <a href="#"><h2><%= link_to product.name, product %></h2></a>
+    <p><%= product.colour %></p>
+    <p><h4 class="inline funky"><strong> <%= number_to_currency(product.price) %></strong></h4></p>
+  <% end %>
+    <ul class="inline_list">
+      <li><%= link_to 'Show', product %>|</li>
+      <li><%= link_to 'Edit', edit_product_path(product) %>|</li>
+      <li> <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
+</div>

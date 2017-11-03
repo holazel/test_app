@@ -2,13 +2,10 @@
   <h2>Products</h2>
   <hr>
   <div class="container-fluid prod">
-    
-      <% @products.each do |product| %>
-        <%= render product %>
-      <% end %>
-      
-  </div>
-  
+    <% cache(cache_key_for_products) do %>
+    <%= render @products %>
+    <% end %>     
+  </div>  
   <hr>
   <%= link_to 'New Product', new_product_path , class: "btn btn-default" %>
   <div class ="page-number">
