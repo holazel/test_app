@@ -1,0 +1,609 @@
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/* line 1, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /Users/DazelTodd/test_app/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*Carousel*/
+/* line 9, /Users/DazelTodd/test_app/app/assets/stylesheets/static_pages.scss */
+.carousel-inner {
+  background-color: #000;
+}
+
+/* line 13, /Users/DazelTodd/test_app/app/assets/stylesheets/static_pages.scss */
+.carousel-caption {
+  font-size: 40px;
+  font-kerning: normal !important;
+  text-rendering: optimizeLegibility;
+  text-align: left;
+  text-transform: uppercase;
+  right: 5%;
+  left: 55%;
+  top: 5%;
+  text-shadow: none;
+  display: inline;
+  color: #ffffff;
+}
+
+/* line 27, /Users/DazelTodd/test_app/app/assets/stylesheets/static_pages.scss */
+.carousel-control {
+  background-image: none !important;
+  text-shadow: none;
+  color: #fff !important;
+  opacity: 100;
+  width: 7%;
+}
+
+/* line 35, /Users/DazelTodd/test_app/app/assets/stylesheets/static_pages.scss */
+.carousel-control:hover, .carousel-control:focus {
+  background-color: transparent;
+  color: #fff;
+  opacity: 100;
+}
+
+/* line 41, /Users/DazelTodd/test_app/app/assets/stylesheets/static_pages.scss */
+.carousel-inner > .item > a > img {
+  width: 50%;
+}
+
+/* line 45, /Users/DazelTodd/test_app/app/assets/stylesheets/static_pages.scss */
+.carousel-indicators {
+  bottom: -60px;
+}
+
+/* line 49, /Users/DazelTodd/test_app/app/assets/stylesheets/static_pages.scss */
+.carousel-indicators > li {
+  border: 0;
+  border-radius: 0;
+  background-color: #999;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+}
+
+/* line 58, /Users/DazelTodd/test_app/app/assets/stylesheets/static_pages.scss */
+.carousel-indicators > .active {
+  background-color: #000;
+}
+
+/* Viewed! */
+/* line 62, /Users/DazelTodd/test_app/app/assets/stylesheets/static_pages.scss */
+.viewed {
+  text-align: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+html{ 
+	height:100%;
+	font-size:100%;
+    font:inherit;
+    font-family: 'EB Garamond', serif;
+}
+body{ 
+	min-height:100%; 
+	padding:0; 
+	margin:0; 
+	position:relative; 
+}
+body::after{ 
+	content:''; display:block; height:100px; 
+}
+
+/* Header and Navigation */
+header {
+    background: #fdfdfd;
+    height: 60px;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+.headercontainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.logo1 {
+        width: 100%;
+        height: auto;
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-bottom: 10px;     
+}
+.logo1:hover {
+    background-color: white;
+}
+.navbar-inverse {
+    background-color: white;
+    position: inherit;
+
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: white;
+    color: black;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: rgba(189, 154, 154, 0);
+}
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+.free-shipping-offer {
+  background: #00263b;
+  width: 100%;
+  line-height: 32px;
+  text-align: center;
+  color: #fff; 
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding: 0 2em;
+  
+  > a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+/* Home */
+/* Main Content */
+.img-responsive {
+	border: 0px solid #ddd;
+}
+.panel1 {
+    border-width: 0px;
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    background: white;
+}
+.subheader1 {
+    line-height: 1.4;
+    font-weight: 300;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+    background: #ffd531;
+    border-radius: 25px;
+    color: #ffffff
+}
+
+.event_title_ {
+	font-weight: 600;
+	color: #ffd531;
+}
+
+/* Footer */
+.footer_content {
+    height: 400px;
+    color: rgb(66, 76, 92);
+    padding-top: 2em
+}
+
+.allfooter{ 
+	background:#11172b;
+}
+
+.allfooter{ 
+  position:absolute; 
+  width:100%; 
+}
+.footer_container {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 2.5em;   
+}
+.footer_container li {
+    font-size: 1.8em;
+}
+.footer_container h3 {
+    color: rgb(230, 231, 245);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+.footer_container p {
+    color: rgb(170,171,187);
+}
+.social_icons {
+    color: #E8D27C;
+    transition: ease-in 450ms;
+}
+.social_icons:hover {
+    color: #E8D27C;
+}
+
+.footer_container li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+/* About Page */
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  width: 170px;
+  background: #dcbc40;
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1em;
+  font-family: 'EB Garamond', serif;
+  transition: ease-in 450ms;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: #F2F2F2;
+  box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.3);
+}
+.main_content h2 {
+    float: left;
+    color: rgb(66, 76, 92);
+    font-size: 3em;
+    margin-top: 0.2em;
+    border-bottom: 0.125em solid;
+}
+.form1 h2 {
+	float: left;
+    color: rgb(66, 76, 92);
+    font-size: 1em;
+    margin-top: 0.2em;
+}
+.main_content h3 {
+    color: rgb(79, 90, 107);
+}
+.work_showcase {
+    float: right;
+    width: 400px;
+}
+
+.btn_primary {
+    margin-top: 1em;
+    position: relative;
+    left: 50%;
+    margin-left: -85px;
+    padding: 10px;
+}
+
+.small-img {
+    width: 400px;
+}
+
+.work_showcase img {
+    
+    border-radius: 1em;
+}
+/* Contact */
+.contact {
+    border: solid 0px #dddddd; 
+    padding: 1.25rem;
+    margin: 1.125rem 0;
+}
+
+/* Responsive Stuff */
+
+@media (max-width: 1200px) {
+    .wrapper, .footer_container {
+        width: 700px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .wrapper, .footer_container {
+        width: 600px;
+        margin: 0 auto;
+    } 
+}
+
+@media (max-width: 768px) {
+    .wrapper, .footer_container {
+        width: auto;
+        margin: 1em 2em;
+    }
+    
+    .heading_content {
+        width: 50%;
+        font-size: 0.8em;
+    }
+    .main_content h2 {
+      margin-top: 0;
+    }
+    .small_bg {
+       width: 80%;
+       height: 80%;
+    }
+    .banner_bg {
+        position: relative;
+        top: 10%;
+        right: 0%;
+    }
+    .footer_container {
+        text-align: center;
+    }
+}
+
+@media (max-width: 620px) {
+    .logo {
+        text-align: center;
+        float: none;
+        letter-spacing: 0.1em;
+        font-size: 1.5em;
+    }
+    nav {
+        
+        text-align: center;
+        padding-top: 0;
+    }
+    .heading_content {
+        width: 40%;
+        font-size: 0.5em;
+    }
+    .btn {
+        font-size: 1.8em;
+        margin-top: 1em;
+    }
+    .sub_content {
+        height: 500px;
+    }
+    .sub_content h2 {
+        text-align: center;
+        border-bottom: none;
+        width: auto;
+        font-size: 2.2em;
+        float: none;
+    }
+    .work_showcase {
+        width: 400px;
+        position: relative;
+        right: 50%;
+        margin-right: -200px;
+    }
+    .btn_primary {
+        font-size: 1em;
+    }
+    .sub_content br {
+        display: none;
+    }
+    .btn_secondary {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .logo {
+        text-align: center;
+        float: none;
+        letter-spacing: 0.1em;
+        font-size: 1.5em;
+
+    }
+    .header-container {
+        
+        text-align: center;
+        padding-top: 0;
+    }
+
+ 
+  
+  .btn {
+    font-size: 1.7em;
+    margin-top: 1.5em;
+   }
+ 
+  
+   .main_content h2, .skills {
+        float: none;
+        text-align: center;
+    }
+    
+    .main_content h2 {
+        font-size: 2.2em;
+        border-bottom: none;
+    }
+    
+    .main_content br {
+        display: none;
+    }
+    
+    .skills {
+        width: auto;
+    }
+    
+    .sub_content {
+        height: auto;
+    }
+    
+    .sub_content h2 {
+        text-align: center;
+        border-bottom: none;
+        width: auto;
+        font-size: 2.2em;
+        float: none;
+    }
+    
+    .sub_content br {
+        display: none;
+    }
+    
+    #topvisual {
+        float: none;
+        width: 400px;
+        position: relative;
+        left: 5%;
+        margin-left: 20px;
+    }
+    
+    .btn_primary {
+        margin:1em;
+        font-size: 1em;
+        position: relative;
+        left: 50%;
+        width: 170px;
+        margin-left: -85px;
+    }
+  .btn_secondary {
+    font-size: 1em;
+  }
+}
