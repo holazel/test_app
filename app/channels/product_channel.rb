@@ -1,6 +1,7 @@
 class ProductChannel < ApplicationCable::Channel
   def subscribed
   	#stream_from "product_channel"
+    #stream_from "products"
     # stream_from "some_channel"
   end
 
