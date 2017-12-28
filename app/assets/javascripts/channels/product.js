@@ -1,6 +1,6 @@
 App.product = App.cable.subscriptions.create("ProductChannel", {
   connected: function() {
-    
+    //alert("1")
     // Called when the subscription is ready for use on the server
   },
 
