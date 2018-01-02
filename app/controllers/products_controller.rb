@@ -16,18 +16,30 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
+    if(current_user && current_user.admin)
+      @product = Product.new
+    else
+      redirect_to root_path, alert: "You are not authorized to access this page."
+    end
   end
 
   def edit
+    unless(current_user && current_user.admin)
+      redirect_to root_path, alert: "You are not authorized to access this page."
+
+    end
+
   end
 
   def create
     @product = Product.new(product_params)
 
+    unless(current_user && current_user.admin)
+     return redirect_to root_path, alert: "You are not authorized to access this page."
+    end
     respond_to do |format|
       if @product.save
-        format.html { redirect_to "/products", notice: 'Product was successfully created.' }
+        format.html { redirect_to "/products/#{@product.id}", notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -37,6 +49,9 @@ class ProductsController < ApplicationController
   end
 
   def update
+    unless(current_user && current_user.admin)
+     return redirect_to root_path, alert: "You are not authorized to access this page."
+    end    
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Awesome! your product has been updated.' }
@@ -49,6 +64,9 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    unless(current_user && current_user.admin)
+     return redirect_to root_path, alert: "You are not authorized to access this page."
+    end   
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Your product has been destroyed, BOOM!' }

@@ -1,6 +1,6 @@
 FactoryGirl.define do
 
-  sequence(:id) { |n| "#{n}" }
+  #sequence(:id) { |n| "#{n}" }
 
   factory :product do
     name "Generated bike"
@@ -8,6 +8,6 @@ FactoryGirl.define do
     price "100.99"
     colour "blue"
     description "Nice bike"
-    id 
+    #id 
   end
 end

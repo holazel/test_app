@@ -3,8 +3,8 @@ require 'rails_helper'
 describe OrdersController, type: :controller do
   context 'GET #index' do
     before do
-      @user1 = FactoryGirl.create(:admin)
-      @user2 = FactoryGirl.create(:user)
+      @user1 = FactoryGirl.create(:admin2)
+      @user2 = FactoryGirl.create(:user2)
     end
 
     it "allows admin to view page" do
